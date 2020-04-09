@@ -1,7 +1,7 @@
 package com.img.fitnessclub.user.controller;
 
-import com.img.fitnessclub.user.entity.BusinessUserLocations;
-import com.img.fitnessclub.user.service.LocationService;
+import com.img.fitnessclub.user.entity.ClientProgramEnrollments;
+import com.img.fitnessclub.user.service.EnrollmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -15,22 +15,22 @@ import java.util.Optional;
 public class Controller {
 
     @Autowired
-    LocationService locationService;
+    EnrollmentService enrollmentService;
     
-    @RequestMapping(value = "/getAllLocations", method = RequestMethod.GET)
-    public List<BusinessUserLocations> getLocations() {
-        return locationService.getAllLocations();
+    @RequestMapping(value = "/getAllEnrollments", method = RequestMethod.GET)
+    public List<ClientProgramEnrollments> getEnrollments() {
+        return enrollmentService.getAllEnrollments();
     }
 
 
-    @RequestMapping(value = "/{UserEmailId}/location", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public BusinessUserLocations createLocation(@PathVariable(value = "UserEmailId") String user_email_id, @RequestBody BusinessUserLocations location) {
-        return locationService.createLocation(user_email_id, location);
+    @RequestMapping(value = "/{UserEmailId}/{ProgramId}/enrollment", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ClientProgramEnrollments createEnrollment(@PathVariable(value = "UserEmailId") String user_email_id, @PathVariable(value = "ProgramId") String program_id, @RequestBody ClientProgramEnrollments enrollment) {
+        return enrollmentService.createEnrollment(user_email_id, program_id, enrollment);
     }
 
-    @RequestMapping(value = "/getLocation/{location_id}", method = RequestMethod.GET)
-    public Optional<BusinessUserLocations> getLocationById(@PathVariable(value = "location_id") String location_id) {
-        return locationService.getLocationById(location_id);
+    @RequestMapping(value = "/getEnrollment/{enrollment_id}", method = RequestMethod.GET)
+    public Optional<ClientProgramEnrollments> getEnrollmentById(@PathVariable(value = "enrollment_id") String enrollment_id) {
+        return enrollmentService.getEnrollmentById(enrollment_id);
     }
 
 
@@ -39,9 +39,9 @@ public class Controller {
   //      return businessService.updateService(serviceid, service);
   //  }
 
-    @RequestMapping(value = "/deleteLocation/{location_id}", method = RequestMethod.DELETE)
-    public ResponseEntity<Object> deleteLocation(@PathVariable(value = "location_id") String location_id) {
-        return locationService.deleteLocation(location_id);
+    @RequestMapping(value = "/deleteEnrollment/{location_id}", method = RequestMethod.DELETE)
+    public ResponseEntity<Object> deleteEnrollment(@PathVariable(value = "enrollment_id") String enrollment_id) {
+        return enrollmentService.deleteEnrollment(enrollment_id);
     } 
 
 }

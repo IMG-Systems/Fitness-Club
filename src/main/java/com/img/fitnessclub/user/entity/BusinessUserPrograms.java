@@ -14,23 +14,23 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "user_profile_info")
+@Table(name = "business_user_programs")
 
-public class UserProfileInfo {
+public class BusinessUserPrograms{
 	
 	@Id
-    @Column(name = "user_email_id")
-    private String user_email_id;
+    @Column(name = "program_id")
+    private String program_id;
   
-  @OneToMany(mappedBy = "userprofileinfo", fetch = FetchType.LAZY)
+  @OneToMany(mappedBy = "businessuserprograms", fetch = FetchType.LAZY)
   private Set<ClientProgramEnrollments> enrollments = new HashSet<>();
   
-  public String getUser_email_id() {
-		return user_email_id;
+  public String getProgram_id() {
+		return program_id;
 	}
 
-	public void setUser_email_id(String user_email_id) {
-		this.user_email_id = user_email_id;
+	public void setProgram_id(String program_id) {
+		this.program_id = program_id;
 	}
 
 	public Set<ClientProgramEnrollments> getEnrollments() {
