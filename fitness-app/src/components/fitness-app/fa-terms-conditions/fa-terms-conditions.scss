@@ -1,0 +1,42 @@
+.tfa-terms-conditions {
+
+    height: 85%;
+    overflow-y: scroll;
+
+    > span {
+        display: inline-block;
+        position: fixed;
+        top: 20px;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        color: #cccccc;
+        z-index: 88;
+    }
+
+    p {
+        margin: 20px 0;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .tfa-accept-terms {
+        position: fixed;
+        width: 100%;
+        bottom: 40px;
+        height: 20px;
+        left: 0;
+        line-height: 20px;
+        text-align: center;
+
+        label {
+            display: inline-block;
+        }
+
+        input {
+            margin-right: 12px;
+            height: 16px;
+            border: 2px solid #cccccc;
+        }
+    }
+}

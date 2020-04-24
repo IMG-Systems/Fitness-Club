@@ -1,0 +1,60 @@
+.tfa-create-account {
+  text-align: center; }
+  .tfa-create-account > span {
+    display: inline-block;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    color: #cccccc;
+    z-index: 88; }
+  .tfa-create-account .tfa-goback {
+    width: 25px;
+    height: 25px;
+    background: #ffffff;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    outline: none;
+    text-decoration: none;
+    color: #cccccc;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 25px;
+    text-align: center;
+    z-index: 89; }
+  .tfa-create-account .tfa-logo {
+    width: 85px;
+    height: 85px;
+    background-color: #cccccc;
+    line-height: 85px;
+    text-align: center;
+    margin: 85px 0;
+    display: inline-block; }
+  .tfa-create-account form {
+    margin: 10px 0; }
+    .tfa-create-account form h2 {
+      font-weight: 800;
+      text-align: left; }
+    .tfa-create-account form input {
+      height: 40px;
+      width: 100%;
+      margin: 10px 0;
+      padding: 0 10px;
+      border: 1px solid #cccccc; }
+    .tfa-create-account form button {
+      position: fixed;
+      bottom: 45px;
+      left: 20px;
+      flex: 100%;
+      border: 1px solid #000000;
+      margin: 0 2px;
+      height: 90px;
+      outline: none;
+      cursor: pointer;
+      line-height: 90px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #000000;
+      width: 90%; }

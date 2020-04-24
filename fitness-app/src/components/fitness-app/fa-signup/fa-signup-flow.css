@@ -1,0 +1,54 @@
+.tfa-signup-flow {
+  display: block;
+  text-align: center;
+  padding-top: 50px; }
+  .tfa-signup-flow > span {
+    display: inline-block;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    color: #cccccc;
+    z-index: 88; }
+  .tfa-signup-flow h2 {
+    font-size: 26px;
+    margin: 50px 0; }
+  .tfa-signup-flow p {
+    font-size: 14px;
+    padding: 0 20px;
+    display: inline-block;
+    width: 50%; }
+  .tfa-signup-flow .tfa-signup-flow-indicator-dots {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    justify-content: center; }
+    .tfa-signup-flow .tfa-signup-flow-indicator-dots ul {
+      width: 110px;
+      display: flex; }
+    .tfa-signup-flow .tfa-signup-flow-indicator-dots li {
+      border: 1px solid #000000;
+      margin: 0 5px;
+      border-radius: 50%;
+      flex: 25%;
+      width: 18px;
+      height: 18px;
+      background: #cccccc; }
+  .tfa-signup-flow .tfa-goback {
+    width: 25px;
+    height: 25px;
+    background: #ffffff;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    outline: none;
+    text-decoration: none;
+    color: #cccccc;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 25px;
+    text-align: center;
+    z-index: 89; }
